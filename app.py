@@ -37,7 +37,7 @@ plt.plot(df.Close,'b')
 st.pyplot(fig)
 
 
-st.subheader("Closing Price vs Time chart with 200MA")
+st.subheader("Closing Price vs Time chart with 100MA and 200MA")
 ma200 = df.Close.rolling(200).mean()
 fig = plt.figure(figsize = (12,6))
 plt.plot(ma100,'g')
@@ -71,7 +71,6 @@ for i in range(100,input_data.shape[0]):
     
 x_test , y_test = np.array(x_test), np.array(y_test)
 y_predicted = model.predict(x_test)
-scaler.scale_
 
 scale_factor = 1/scaler.scale_[0]
 
